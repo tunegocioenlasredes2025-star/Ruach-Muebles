@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ruach Muebles · Showroom de muebles en Ituzaingó</title>
+<meta name="description" content="Mueblería en Av. Int. Carlos Ratti 778, Ituzaingó. Comedores, living y habitación en madera. Showroom para ver y probar antes de comprar. 4,7 en Google.">
+<meta name="theme-color" content="#FFBB70">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* pipeteados del logo de Ruach Muebles */
+  --durazno:#FFBB70;
+  --durazno-cl:#FFEBD4;
+  --durazno-bd:#F2CFA6;
+  --marron:#6E4424;      /* el trazo del logo */
+  --marron-cl:#8A5B37;
+  --crema:#FDF7F0;
+  --papel:#fff;
+  --tinta:#2A1A0F;
+  --tinta-2:#5A4433;
+  --gris:#8A7766;
+  --linea:#EBE0D4;
+  --wa:#25d366;
+  --r:16px;
+  --ancho:1100px;
+  --f:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--crema);color:var(--tinta);font-family:var(--f);font-size:16px;line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+.caja{width:100%;max-width:var(--ancho);margin:0 auto;padding:0 18px}
+section{padding:48px 0}
+h1,h2,h3{line-height:1.06;letter-spacing:-.028em;font-weight:900}
+h1{font-size:clamp(34px,9.2vw,60px)}
+h2{font-size:clamp(25px,6.4vw,38px)}
+h3{font-size:17.5px;letter-spacing:-.015em;font-weight:800}
+p{text-wrap:pretty}
+.rotulo{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--marron);border-bottom:2px solid var(--durazno);padding-bottom:5px;margin-bottom:15px}
+.sub{color:var(--gris);font-size:15.5px;margin-top:11px;max-width:54ch}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 19px;border-radius:99px;font-size:15px;font-weight:800;
+  border:2px solid transparent;cursor:pointer;line-height:1;font-family:inherit}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-wa{background:var(--wa);color:#03351b}
+.btn-ma{background:var(--marron);color:#fff}
+.btn-du{background:var(--durazno);color:var(--marron)}
+.btn-linea{border-color:var(--durazno-bd);color:var(--marron);background:#fff}
+.btn-chico{padding:10px 15px;font-size:14px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--marron);outline-offset:3px}
+
+/* ---------- barra ---------- */
+.top{position:sticky;top:0;z-index:40;background:rgba(253,247,240,.95);backdrop-filter:blur(9px);
+  border-bottom:1px solid var(--linea)}
+.top .caja{display:flex;align-items:center;gap:12px;height:62px}
+.marca{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
+.iso{width:40px;height:40px;flex:none}
+.marca b{font-size:16px;font-weight:900;letter-spacing:.01em;line-height:1.05;display:block;text-transform:uppercase}
+.marca small{display:block;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--gris);font-weight:700}
+.solo-gr{display:none}
+@media(min-width:760px){.solo-gr{display:inline-flex}}
+
+/* ---------- portada ---------- */
+.hero{padding:44px 0 0;background:linear-gradient(180deg,var(--durazno-cl) 0%,var(--crema) 100%)}
+.hero h1 em{font-style:normal;color:var(--marron)}
+.hero .bajada{color:var(--tinta-2);font-size:17px;margin-top:15px;max-width:45ch;font-weight:500}
+.sellos{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.sello{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--durazno-bd);
+  border-radius:99px;padding:8px 14px;font-size:13.5px;font-weight:700}
+.sello svg{width:16px;height:16px;flex:none;color:var(--marron)}
+.sello .estrella{color:#E8A33C}
+.sello span{color:var(--gris);font-weight:600}
+.acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.acciones .btn{flex:1 1 190px}
+/* la banda de foto a todo el ancho: foto propia de su tienda online */
+.banda{margin-top:34px;position:relative;height:clamp(260px,52vw,420px);overflow:hidden}
+.banda img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
+.banda .lema{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;
+  background:linear-gradient(0deg,rgba(42,26,15,.78),transparent);color:#fff;
+  font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.banda .lema b{display:block;max-width:var(--ancho);margin:0 auto}
+
+/* ---------- ambientes ---------- */
+.ambientes{display:grid;gap:12px;margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(252px,1fr))}
+.amb{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:24px;
+  border-top:5px solid var(--durazno)}
+.amb .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:var(--durazno-cl);color:var(--marron);margin-bottom:14px}
+.amb .ico svg{width:24px;height:24px}
+.amb p{color:var(--gris);font-size:14.5px;margin-top:7px}
+.amb ul{margin-top:12px;padding-left:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.amb li{font-size:12.5px;font-weight:700;color:var(--tinta-2);background:var(--crema);
+  border:1px solid var(--linea);border-radius:99px;padding:5px 10px}
+
+/* ---------- piezas ---------- */
+.franja{background:#fff;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.piezas{display:grid;gap:16px;margin-top:26px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.pieza{display:flex;flex-direction:column}
+.pieza .foto{border-radius:var(--r);overflow:hidden;background:var(--crema);aspect-ratio:4/5}
+.pieza .foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+@media(hover:hover){.pieza:hover .foto img{transform:scale(1.045)}}
+.pieza h3{margin-top:12px}
+.pieza .ver{margin-top:6px;font-size:13.5px;font-weight:800;color:var(--marron);
+  display:inline-flex;align-items:center;gap:6px}
+.pieza .ver svg{width:14px;height:14px}
+.mas{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* ---------- por que ---------- */
+.motivos{display:grid;gap:12px;margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(248px,1fr))}
+.motivo{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:24px}
+.motivo .k{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--marron);background:var(--durazno);border-radius:99px;padding:5px 11px;margin-bottom:14px}
+.motivo b{display:block;font-size:17px;font-weight:800;letter-spacing:-.015em;margin-bottom:6px}
+.motivo p{color:var(--gris);font-size:14.5px}
+
+/* ---------- opiniones ---------- */
+.ops{display:grid;gap:12px;margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(262px,1fr))}
+.op{border:1px solid var(--linea);border-radius:var(--r);padding:24px;background:var(--crema);
+  display:flex;flex-direction:column}
+.op .estrellas{color:#E8A33C;font-size:14px;letter-spacing:.1em;margin-bottom:10px}
+.op p{font-size:15.5px;color:var(--tinta-2);flex:1}
+.op cite{display:block;margin-top:13px;font-style:normal;font-size:12.5px;color:var(--gris);font-weight:700}
+
+/* ---------- donde ---------- */
+.donde{display:grid;gap:22px;margin-top:24px}
+@media(min-width:880px){.donde{grid-template-columns:1fr 1fr;align-items:start}}
+.dato{display:flex;gap:13px;padding:15px 0;border-bottom:1px solid var(--linea);align-items:flex-start}
+.dato:last-child{border-bottom:0}
+.dato>svg{width:20px;height:20px;flex:none;color:var(--marron);margin-top:3px}
+.dato b{display:block;font-size:15.5px;font-weight:800}
+.dato b a{border-bottom:2px solid var(--durazno)}
+.dato span{display:block;color:var(--gris);font-size:14.5px;margin-top:2px}
+.mapa{border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;min-height:320px;background:#fff}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* ---------- pie ---------- */
+.pie{background:var(--marron);color:#E4D3C4;padding:36px 0 28px;font-size:14px}
+.pie .caja{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.pie b{color:#fff;letter-spacing:.05em}
+.pie .firma{font-size:12.5px;color:#BFA894}
+.pie .firma a{color:#EBD9C9;text-decoration:underline}
+
+.flota{position:fixed;right:15px;bottom:15px;z-index:50;box-shadow:0 10px 26px -8px rgba(42,26,15,.45)}
+@media(min-width:900px){.flota{right:24px;bottom:24px}}
+@media(prefers-reduced-motion:no-preference){
+  .rev{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .rev.in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <!-- isotipo: el circulo durazno con la casita, la mesa y las dos sillas del logo de Ruach -->
+  <symbol id="iso" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="32" fill="#FFBB70"/>
+    <g fill="none" stroke="#6E4424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 50V25.5L32 12l17 13.5V50"/>
+      <path d="M22.5 34h19"/>
+      <path d="M26 34v8M38 34v8"/>
+      <path d="M22.5 28.5v13M41.5 28.5v13"/>
+      <path d="M22.5 37.5h4M37.5 37.5h4"/>
+    </g>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2m5.8 14.16c-.24.68-1.42 1.3-1.95 1.34-.5.04-.98.22-3.3-.69-2.78-1.09-4.54-3.94-4.68-4.12-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.6.6.46.24.53.8 1.87.87 2 .07.14.11.29.02.47-.9.18-.14.29-.27.45l-.4.47c-.13.13-.27.28-.12.55.15.27.66 1.09 1.42 1.77.98.87 1.8 1.14 2.07 1.27.27.14.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.14.45.2.51.31.07.11.07.64-.17 1.32"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16m0 2.16c-3.14 0-3.51.01-4.75.07-1.15.05-1.77.24-2.18.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.36 1.03-.41 2.18-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.05 1.15.24 1.77.41 2.18.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.36 2.18.41 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c1.15-.05 1.77-.24 2.18-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.36-1.03.41-2.18.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.05-1.15-.24-1.77-.41-2.18a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.36-2.18-.41-1.24-.06-1.61-.07-4.75-.07m0 3.68a5.99 5.99 0 1 1 0 11.98 5.99 5.99 0 0 1 0-11.98m0 9.88a3.89 3.89 0 1 0 0-7.78 3.89 3.89 0 0 0 0 7.78m7.63-10.12a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="reloj" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 10.6 4 2.3-.9 1.6L11 13V6h2z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 17.27 5.18 3.13-1.37-5.89 4.57-3.96-6.02-.51L12 4.5 9.64 10.04l-6.02.51 4.57 3.96-1.37 5.89z"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m8 7 8-5H4z"/></symbol>
+  <symbol id="carro" viewBox="0 0 24 24"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4m10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4M1 2h3.3l1 4H22a1 1 0 0 1 .97 1.24l-2.2 8A1 1 0 0 1 19.8 16H7.5a1 1 0 0 1-.97-.76L4.1 4H1z"/></symbol>
+  <symbol id="flecha" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 5.2 20 12l-6.8 6.8-1.4-1.4 4.4-4.4H4v-2h12.2l-4.4-4.4z"/></symbol>
+  <!-- un icono distinto por ambiente -->
+  <symbol id="comedor" viewBox="0 0 24 24"><path fill="currentColor" d="M2 8h20v2h-2v11h-2v-5H6v5H4V10H2zm4 4v2h12v-2z"/></symbol>
+  <symbol id="living" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v2a2.5 2.5 0 0 1 2 2.45V17a1 1 0 0 1-1 1h-1v2h-2v-2H6v2H4v-2H3a1 1 0 0 1-1-1v-5.55A2.5 2.5 0 0 1 4 9m2 0h12V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/></symbol>
+  <symbol id="cama" viewBox="0 0 24 24"><path fill="currentColor" d="M2 4h2v9h7V7h8a3 3 0 0 1 3 3v10h-2v-3H4v3H2zm4 3h3a2 2 0 1 1 0 4H6a2 2 0 1 1 0-4"/></symbol>
+  <symbol id="camion" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h11a1 1 0 0 1 1 1v2h2.6c.4 0 .7.2.9.5l2.3 3.6c.1.2.2.4.2.6V17a1 1 0 0 1-1 1h-1.2a2.8 2.8 0 0 1-5.6 0H9.8a2.8 2.8 0 0 1-5.6 0H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1m12 5v2.5h4.2L17.6 10zM7 16.1a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6m9.4 0a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6"/></symbol>
+  <symbol id="tarjeta" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v2H2V6a1 1 0 0 1 1-1M2 10h20v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm3 5v2h6v-2z"/></symbol>
+  <symbol id="ramita" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21c-.6 0-1-.4-1-1v-3.1C6.5 16.4 3 12.6 3 8V6.6c0-.4.4-.7.8-.6 3.7.6 6.5 3.2 7.2 6.6V20c0 .6-.4 1-1 1zm1-5.2V12c.7-3.4 3.5-6 7.2-6.6.4-.1.8.2.8.6V7c0 4.2-3.4 7.7-8 8.8"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="caja">
+    <a class="marca" href="#">
+      <svg class="iso" aria-hidden="true"><use href="#iso"/></svg>
+      <span>
+        <b>Ruach Muebles</b>
+        <small>Showroom · Ituzaingó</small>
+      </span>
+    </a>
+    <a class="btn btn-linea btn-chico solo-gr" href="#showroom">Qué hay en el local</a>
+    <a class="btn btn-wa btn-chico" href="https://wa.me/5491130862714" target="_blank" rel="noopener">
+      <svg><use href="#wa"/></svg> WhatsApp
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ portada ============ -->
+<section class="hero">
+  <div class="caja">
+    <span class="rotulo">Showroom · Av. Int. Carlos Ratti 778, Ituzaingó</span>
+    <h1>El placer de<br><em>estar en casa</em>.</h1>
+    <p class="bajada">Mueblería en Ituzaingó desde 2020. Comedores, living y habitación en madera, para venir a verlos, tocarlos y sentarte antes de decidir.</p>
+
+    <div class="sellos">
+      <span class="sello">
+        <svg class="estrella"><use href="#star"/></svg>
+        <b>4,7</b><span>· 109 opiniones en Google</span>
+      </span>
+      <span class="sello">
+        <svg><use href="#ig"/></svg>
+        <b>18,8 mil</b><span>seguidores</span>
+      </span>
+      <span class="sello"><b>Desde 2020</b></span>
+    </div>
+
+    <div class="acciones">
+      <a class="btn btn-wa" href="https://wa.me/5491130862714" target="_blank" rel="noopener">
+        <svg><use href="#wa"/></svg> Consultar por WhatsApp
+      </a>
+      <a class="btn btn-linea" href="#donde">
+        <svg><use href="#pin"/></svg> Cómo llegar al showroom
+      </a>
+    </div>
+  </div>
+
+  <!-- foto del showroom, de su propia tienda online -->
+  <div class="banda rev">
+    <img src="img/p-bali.webp" alt="Interior del showroom de Ruach Muebles en Ituzaingó, con una mesa de comedor de madera y sillas" width="640" height="853">
+    <div class="lema"><b>Av. Int. Carlos Ratti 778 · Ituzaingó</b></div>
+  </div>
+</section>
+
+<!-- ============ ambientes ============ -->
+<section>
+  <div class="caja">
+    <span class="rotulo">Qué hacemos</span>
+    <h2>Tres ambientes de la casa,<br>en madera.</h2>
+    <p class="sub">Las mismas categorías que tenemos en el local y en la tienda online.</p>
+
+    <div class="ambientes">
+      <article class="amb rev">
+        <div class="ico"><svg><use href="#comedor"/></svg></div>
+        <h3>Comedor</h3>
+        <p>Mesas fijas y extensibles, y las sillas para acompañarlas. Es lo que más sale.</p>
+        <ul><li>Juegos de comedor</li><li>Mesas</li><li>Sillas</li><li>Banquetas</li></ul>
+      </article>
+      <article class="amb rev">
+        <div class="ico"><svg><use href="#living"/></svg></div>
+        <h3>Living</h3>
+        <p>Para el estar: lo que se ve apenas entrás a la casa.</p>
+        <ul><li>Sillones</li><li>Racks</li><li>Bahiuts</li><li>Mesas ratonas</li></ul>
+      </article>
+      <article class="amb rev">
+        <div class="ico"><svg><use href="#cama"/></svg></div>
+        <h3>Habitación</h3>
+        <p>Lo que completa el cuarto, del respaldo a las mesitas.</p>
+        <ul><li>Respaldos</li><li>Mesitas de luz</li><li>Cómodas</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ piezas ============ -->
+<section class="franja" id="showroom">
+  <div class="caja">
+    <span class="rotulo">En el local</span>
+    <h2>Algo de lo que vas<br>a ver en el showroom.</h2>
+    <p class="sub">Seis piezas de las que están en Ratti 778. Cada una abre su ficha en nuestra tienda online, con medidas, precio y formas de pago al día.</p>
+
+    <div class="piezas">
+      <a class="pieza rev" href="https://www.ruachmuebles.com/productos/mesa-fija-nordica-4-sillas-lairen-1iwc2/" target="_blank" rel="noopener">
+        <div class="foto"><img src="img/p-lairen.webp" alt="Mesa fija nórdica de madera con cuatro sillas Lairén" width="640" height="853" loading="lazy"></div>
+        <h3>Mesa fija nórdica + 4 sillas Lairén</h3>
+        <span class="ver">Verla en la tienda <svg><use href="#flecha"/></svg></span>
+      </a>
+      <a class="pieza rev" href="https://www.ruachmuebles.com/productos/juego-de-comedor-bali-8-sillas-mesa-2x90cm/" target="_blank" rel="noopener">
+        <div class="foto"><img src="img/p-comedor8.webp" alt="Juego de comedor Bali con mesa de 2 metros y ocho sillas de madera" width="640" height="853" loading="lazy"></div>
+        <h3>Juego de comedor Bali, 8 sillas + mesa 2×90</h3>
+        <span class="ver">Verlo en la tienda <svg><use href="#flecha"/></svg></span>
+      </a>
+      <a class="pieza rev" href="https://www.ruachmuebles.com/productos/mesa-extensible-6-sillas-pampa/" target="_blank" rel="noopener">
+        <div class="foto"><img src="img/p-pampa.webp" alt="Mesa extensible de madera con seis sillas Pampa tapizadas en verde" width="640" height="853" loading="lazy"></div>
+        <h3>Mesa extensible + 6 sillas Pampa</h3>
+        <span class="ver">Verla en la tienda <svg><use href="#flecha"/></svg></span>
+      </a>
+      <a class="pieza rev" href="https://www.ruachmuebles.com/productos/silla-merlot/" target="_blank" rel="noopener">
+        <div class="foto"><img src="img/p-merlot.webp" alt="Cuatro sillas Merlot de madera con asiento y respaldo tapizados en negro" width="640" height="879" loading="lazy"></div>
+        <h3>Silla Merlot</h3>
+        <span class="ver">Verla en la tienda <svg><use href="#flecha"/></svg></span>
+      </a>
+      <a class="pieza rev" href="https://www.ruachmuebles.com/productos/silla-sky/" target="_blank" rel="noopener">
+        <div class="foto"><img src="img/p-sky.webp" alt="Silla Sky de madera con respaldo curvo y asiento tapizado en gris" width="640" height="635" loading="lazy"></div>
+        <h3>Silla Sky</h3>
+        <span class="ver">Verla en la tienda <svg><use href="#flecha"/></svg></span>
+      </a>
+      <a class="pieza rev" href="https://www.ruachmuebles.com/productos/rack1/" target="_blank" rel="noopener">
+        <div class="foto"><img src="img/p-rack.webp" alt="Rack de televisor combinado en madera y blanco, con estante y cajones" width="640" height="853" loading="lazy"></div>
+        <h3>Rack</h3>
+        <span class="ver">Verlo en la tienda <svg><use href="#flecha"/></svg></span>
+      </a>
+    </div>
+
+    <div class="mas">
+      <a class="btn btn-ma" href="https://www.ruachmuebles.com/productos/" target="_blank" rel="noopener">
+        <svg><use href="#carro"/></svg> Ver todo el catálogo
+      </a>
+      <a class="btn btn-linea" href="https://www.instagram.com/ruach_muebles/" target="_blank" rel="noopener">
+        <svg><use href="#ig"/></svg> @ruach_muebles
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ por que ============ -->
+<section>
+  <div class="caja">
+    <span class="rotulo">Cómo trabajamos</span>
+    <h2>Lo que ya está,<br>y no hay que preguntar.</h2>
+    <p class="sub">Las condiciones de siempre, las mismas del local y de la tienda online.</p>
+
+    <div class="motivos">
+      <article class="motivo rev">
+        <span class="k">Pagos</span>
+        <b>3 y 6 cuotas sin interés</b>
+        <p>Y 30% de descuento pagando en efectivo o por transferencia.</p>
+      </article>
+      <article class="motivo rev">
+        <span class="k">Envíos</span>
+        <b>A todo el país</b>
+        <p>Si no podés venir hasta Ituzaingó, el mueble sale igual.</p>
+      </article>
+      <article class="motivo rev">
+        <span class="k">Atención</span>
+        <b>Primero se asesora</b>
+        <p>Lo que más aparece en las opiniones: que preguntás y te contestan antes de comprar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ opiniones ============ -->
+<section class="franja">
+  <div class="caja">
+    <span class="rotulo">Opiniones</span>
+    <h2>4,7 sobre 109 opiniones<br>en Google.</h2>
+    <p class="sub">Textuales. Las dos primeras son de la ficha de Google; la tercera está publicada en nuestra tienda online.</p>
+
+    <div class="ops">
+      <article class="op rev">
+        <div class="estrellas">★★★★★</div>
+        <p>“Muebles preciosos, muy buena atención, asesoramiento y calidad humana”</p>
+        <cite>Opinión en Google</cite>
+      </article>
+      <article class="op rev">
+        <div class="estrellas">★★★★★</div>
+        <p>“Buena calidad y buen servicio al cliente”</p>
+        <cite>Opinión en Google</cite>
+      </article>
+      <article class="op rev">
+        <div class="estrellas">★★★★★</div>
+        <p>“Respondieron todas mis preguntas de asesoramiento. Cumplieron en costos, fecha de entrega y calidad del producto.”</p>
+        <cite>Myrian Leal de Brum · testimonio en ruachmuebles.com</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ donde ============ -->
+<section id="donde">
+  <div class="caja">
+    <span class="rotulo">Dónde estamos</span>
+    <h2>Av. Int. Carlos Ratti 778,<br>Ituzaingó.</h2>
+    <p class="sub">Ojo con el mediodía: cerramos a las 13 y volvemos a abrir a las 15.</p>
+
+    <div class="donde">
+      <div>
+        <div class="dato">
+          <svg><use href="#pin"/></svg>
+          <span><b>Av. Int. Carlos Ratti 778</b><span>Ituzaingó, Provincia de Buenos Aires</span></span>
+        </div>
+        <div class="dato">
+          <svg><use href="#reloj"/></svg>
+          <span><b>Cerramos de 13 a 15</b><span>A la tarde seguimos atendiendo</span></span>
+        </div>
+        <div class="dato">
+          <svg><use href="#wa"/></svg>
+          <span><b><a href="https://wa.me/5491130862714" target="_blank" rel="noopener">11 3086-2714</a></b><span>WhatsApp, para consultar medidas y stock</span></span>
+        </div>
+        <div class="dato">
+          <svg><use href="#carro"/></svg>
+          <span><b><a href="https://www.ruachmuebles.com" target="_blank" rel="noopener">ruachmuebles.com</a></b><span>Nuestra tienda online, con precios y medidas</span></span>
+        </div>
+        <div class="dato">
+          <svg><use href="#ig"/></svg>
+          <span><b><a href="https://www.instagram.com/ruach_muebles/" target="_blank" rel="noopener">@ruach_muebles</a></b><span>Lo que va entrando al showroom</span></span>
+        </div>
+        <div class="dato">
+          <svg><use href="#mail"/></svg>
+          <span><b><a href="mailto:ruachmuebles@gmail.com">ruachmuebles@gmail.com</a></b><span>Para presupuestos y proyectos</span></span>
+        </div>
+      </div>
+
+      <div class="mapa rev">
+        <iframe title="Mapa de Ruach Muebles, Av. Int. Carlos Ratti 778, Ituzaingó" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.%20Int.%20Carlos%20Ratti%20778,%20Ituzaing%C3%B3&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="caja">
+    <div>
+      <b>RUACH MUEBLES</b><br>
+      Av. Int. Carlos Ratti 778, Ituzaingó · 11 3086-2714
+    </div>
+    <div class="firma">
+      Demo hecha por <a href="https://tunegocioenlasredes.com.ar" target="_blank" rel="noopener">Tu Negocio En Las Redes</a>.<br>
+      Página de muestra, sin publicar.
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-wa flota" href="https://wa.me/5491130862714" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a Ruach Muebles">
+  <svg><use href="#wa"/></svg> WhatsApp
+</a>
+
+<script>
+/* Aparecer al scrollear. NO se usa IntersectionObserver a proposito: con un
+   scroll rapido las secciones pasan entre frames, no se registran y quedan
+   invisibles para siempre. Ademas hay una red de seguridad a los 4 segundos. */
+(function () {
+  var els = [].slice.call(document.querySelectorAll('.rev'));
+  if (!els.length) return;
+  var pedido = false;
+  function revisar() {
+    pedido = false;
+    var alto = window.innerHeight;
+    for (var i = els.length - 1; i >= 0; i--) {
+      if (els[i].getBoundingClientRect().top < alto - 60) {
+        els[i].classList.add('in');
+        els.splice(i, 1);
+      }
+    }
+  }
+  function pedir() { if (!pedido) { pedido = true; requestAnimationFrame(revisar); } }
+  addEventListener('scroll', pedir, { passive: true });
+  addEventListener('resize', pedir, { passive: true });
+  revisar();
+  setTimeout(function () {
+    document.querySelectorAll('.rev').forEach(function (e) { e.classList.add('in'); });
+  }, 4000);
+})();
+</script>
+</body>
+</html>
